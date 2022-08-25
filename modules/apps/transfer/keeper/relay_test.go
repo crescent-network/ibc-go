@@ -104,6 +104,21 @@ func (suite *KeeperTestSuite) TestSendTransfer() {
 				amount = sdk.NewCoin(sdk.DefaultBondDenom, sdk.NewInt(100))
 			}, true, false,
 		},
+		// not allowing pool coin to be transferred
+		{
+			"not allowed denom transfer failed",
+			func() {
+				suite.coordinator.CreateTransferChannels(path)
+				amount = sdk.NewCoin("pool1", sdk.NewInt(100))
+			}, true, false,
+		},
+		{
+			"not allowed denom transfer failed - 2",
+			func() {
+				suite.coordinator.CreateTransferChannels(path)
+				amount = sdk.NewCoin("pool1", sdk.NewInt(100))
+			}, false, false,
+		},
 	}
 
 	for _, tc := range testCases {
