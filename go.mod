@@ -127,6 +127,6 @@ require (
 replace (
 	// dragonberry replace for ics23
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-	github.com/cosmos/cosmos-sdk => github.com/crescent-network/cosmos-sdk v1.1.3-sdk-0.45.9
+	github.com/cosmos/cosmos-sdk => github.com/crescent-network/cosmos-sdk v1.1.4-sdk-0.45.10
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 )
